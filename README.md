@@ -25,7 +25,7 @@ Coming soon in version 0.2.2
 - segmented regression analysis for CPRD data.
 - HTML time series (uses the R packages timevis and htmltools) plots of patient medical history (example contains fabricated data). 
 <center>
-<img src="https://github.com/acnash/RDrugTrajectory/blob/master/images/timeseries.jpg" width="450" />
+<img src="images/timeseries.jpg" width="450" />
 </center>
 
 ## Motivation
@@ -45,7 +45,7 @@ Example results using **fabricated electronic healthcare records.**
 Plotting the number of patients by their first drug prescription (Figure 1) is achieved by simply accessing the frequency data.frame in the FirstDrugObject list-type. The first element holds a named-list (by the drug ID) of patient id vectors, the second entry reflects the first entry in structure but holds the event dates, and the third element is a data.frame of drug by number of first prescriptions on record. With all of this information, one is able to analysis each drug type by social-demographic factors (functions provided). </br>
 
 <center>
-<img src="https://github.com/acnash/RDrugTrajectory/blob/master/images/prescription_frequency.png" width="450" />
+<img src="images/prescription_frequency.png" width="450" />
     
 **Figure 1.** First drug prescription (matched to a disease event e.g., headache) frequency. </br> </br>
 </center>
@@ -53,7 +53,7 @@ Plotting the number of patients by their first drug prescription (Figure 1) is a
 rdrugtrajectory can produce the data structure necessary to perform a mean cumulative function (MCF) over several groups. Having first filtered the cohort for only medication of interest, and MCF plot reveals prescription burden by social-demographic factors, for example by social deprivation scores (Figure 2), or whole cohort populations. </br>
 
 <center>
-<img src="https://github.com/acnash/RDrugTrajectory/blob/master/images/IMD_prescriptions.png" width="450" />
+<img src="images/IMD_prescriptions.png" width="450" />
     
 **Figure 2.** Cumulative drug prescriptions stratified by patient IMD score.</br></br>
 </center>
@@ -61,7 +61,7 @@ rdrugtrajectory can produce the data structure necessary to perform a mean cumul
 The first codedraft of rdrugtrajectory is able to plot the change in a patients medication starting from their first prescription (Figure 3). Later releases will factor in time.</br>
 
 <center>
-<img src="https://github.com/acnash/RDrugTrajectory/blob/master/images/drug_switch.png" width="450" />
+<img src="images/drug_switch.png" width="450" />
 
 **Figure 3.** Prescription drug changes. From first drug prescription matched with disease. The example does not take into account time. </br>
 </center>
@@ -72,7 +72,7 @@ Whilst in alpha development phase, please download a release and install locally
 (1) Install all dependencies first. For example, `install.packages("foreach")`. The dependencies are:
 plyr, dplyr, foreach, doParallel, data.table, parallel, splus2R, rlist, reda, ggplot2, ggalluvial, stats, utils, useful
 
-(2) Download the latest <a href="https://github.com/acnash/RDrugTrajectory/releases">release</a> of rdrugtrajectory and install using:
+(2) Download the latest <a href="/releases">release</a> of rdrugtrajectory and install using:
 
     install.packages("path/to/tar/file", source = TRUE, repos=NULL) 
     library(rdrugtrajectory) 
@@ -80,16 +80,13 @@ plyr, dplyr, foreach, doParallel, data.table, parallel, splus2R, rlist, reda, gg
 Ideally you should also have a copy of the medical.txt and product.txt files that can be found inside the Windows installation of the CPRD data dictionary. These files are used to name products (e.g., drugs) and medical terms. In their absence the R package will still work, however, the *medcode* and *prodcode* entries will remain coded. Please read the instructions on how to structure your data.
 
 ## Reference manual
-The forth coming publication will contain a number of examples, for now, please check out the <a href="https://github.com/acnash/RDrugTrajectory/blob/master/rdrugtrajectory_0.2.0.pdf">reference manual</a>.
+The forth coming publication will contain a number of examples, for now, please check out the <a href="rdrugtrajectory_0.2.0.pdf">reference manual</a>.
 
 ## Code style
 The conventional R code style with original Java/C++ code blocks (showing my age). I do not use the R dot-notation for naming variables and I have avoided the %>% infix notation where possible.  
 
-## Tutorials
-Please head over to the <a href="https://github.com/acnash/RDrugTrajectory/wiki">wiki page</a> for scenario based tutorials. 
-
 ## API Reference
-Please see the available <a href="https://github.com/acnash/RDrugTrajectory/blob/master/rdrugtrajectory_0.2.0.pdf">reference manual</a> and forth coming publication. 
+Please see the available <a href="rdrugtrajectory_0.2.0.pdf">reference manual</a> and forth coming publication. 
 
 ## Tests
 There are basic unit tests one can run. Instruction will be added here in due course.
